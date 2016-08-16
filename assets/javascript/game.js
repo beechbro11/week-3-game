@@ -18,20 +18,18 @@ console.log(answer);
  document.onkeyup = function(event){    
  		var letter = String.fromCharCode(event.keyCode).toLowerCase();
 		var found = false;
-
+		var correct = false;
 		for(var i =0; i < rand.length; i++){
+			found = false;
  			if(letter == rand[i]){
- 				found = true;			
+ 				found = true;
+ 				correct = true;			
+ 			}
+ 			if(found === true){
+ 				answer[i] = letter;
  			}
  		}
- 		console.log("help")
- 		if(found = true){
- 			answer[i] = letter;
- 			console.log(answer);
- 		}
- 		else{
- 			guesses--;
- 		}
- 		
+ 		console.log(answer);
+ 		console.log(correct);
  	}
  	
