@@ -13,21 +13,25 @@ for (var i = 0; i < rand.length; i++){
 	answer[i] = "_";
 }
 console.log(answer);
-document.write(answer);
+
 //  user picks a letter to guess word
  document.onkeyup = function(event){    
  		var letter = String.fromCharCode(event.keyCode).toLowerCase();
-			
-			//if the letter matches a index in answer array, replace the index. 
- 		for(var i =0; i < rand.length; i++){
+		var found = false;
+
+		for(var i =0; i < rand.length; i++){
  			if(letter == rand[i]){
- 				answer[i] = letter;
- 				alert(letter + " "+ "is correct!")
- 			}
- 			else{
- 				console.log(letter +" "+ "is not correct. Guess again!")
+ 				found = true;			
  			}
  		}
- 		console.log(answer)
- 		document.write(answer);
+ 		console.log("help")
+ 		if(found = true){
+ 			answer[i] = letter;
+ 			console.log(answer);
+ 		}
+ 		else{
+ 			guesses--;
+ 		}
+ 		
  	}
+ 	
