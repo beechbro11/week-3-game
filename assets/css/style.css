@@ -1,0 +1,29 @@
+ body{
+    background-image: url('../images/abstract.jpg');
+    font-family: 'Sorts Mill Goudy', serif;
+ }
+
+.container .jumbotron, .container-fluid .jumbotron {
+    padding-right: 60px;
+    padding-left: 60px;
+    background-color: #1a1a1a;
+    color: aliceblue;
+}
+.panel-default>.panel-heading {
+    color: #f0f8ff;
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+#panel_one{
+      width: 300px;
+}
+
+.jumbotron .h1, .jumbotron h1 {
+  text-align: center;
+}
+.jumbotron .h2, .jumbotron h2 {
+  text-align: center;
+}
+.jumbotron .h5, .jumbotron h5 {
+    text-align:center;
+  }
