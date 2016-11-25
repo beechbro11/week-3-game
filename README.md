@@ -5,6 +5,6 @@
 Checkout my Hangmans app [Here!]
 [Here!]: http://sportshangman.herokuapp.com/
 
-# Screenshot to sample page
+# Screenshot to show how app looks!
 
 ![alt text](./assets/images/hangmanScreenshot.PNG)
