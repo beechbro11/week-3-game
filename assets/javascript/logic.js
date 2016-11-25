@@ -38,7 +38,7 @@ function startGame() {
 
 // comparisons for matches. 
 function checkLetters(letter) {
-	var letterInWord = false; // 	
+	var letterInWord = false; 
 	for (var i=0; i<numBlanks; i++) {
 		if(chosenWord[i] == letter) {
 			letterInWord = true; 
@@ -53,8 +53,20 @@ function checkLetters(letter) {
 		console.log(blanksAndSuccesses);
 	}
 	else {
+		var repeatedWrongLetter = false;
+		for(var i=0; i<wrongGuesses.length; i++){
+			if(wrongGuesses[i] == letter) {
+				repeatedWrongLetter = true
+			}
+		}
+		if(repeatedWrongLetter){
+			console.log(repeatedWrongLetter);
+			alert('already guessed this! guess again!')
+		}
+		else{
 		wrongGuesses.push(letter); 
 		numGuesses--; 
+		}
 	}
 }
 function roundComplete(){
@@ -75,6 +87,7 @@ function roundComplete(){
 	// If we've run out of guesses
 	else if(numGuesses == 0) {
 		lossCounter++; 	
+		alert('YOU LOSEEEEEEEE! play again!')
 		// Update the loss counter in the HTML
 		document.getElementById("lossCounter").innerHTML= lossCounter; 
 		startGame(); // restart the game
